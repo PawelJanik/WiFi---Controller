@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="59mm"
+   height="34mm"
+   viewBox="0 0 59 34"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="panel.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/pawel/Projekty/WiFi - Controller/panel.png"
+   inkscape:export-xdpi="597.54578"
+   inkscape:export-ydpi="597.54578">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.59"
+     inkscape:cx="116.34284"
+     inkscape:cy="49.386812"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1135"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <defs
+     id="defs146" />
+  <metadata
+     id="metadata149">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <circle
+       id="path162"
+       cx="3.1900227"
+       cy="5.1564178"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-3"
+       cx="8.1938429"
+       cy="5.1390901"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-6"
+       cx="13.251744"
+       cy="5.147964"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-7"
+       cx="18.426264"
+       cy="5.1318359"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-5"
+       cx="30.183527"
+       cy="5.1679897"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-35"
+       cx="38.878929"
+       cy="5.1679897"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-62"
+       cx="52.47514"
+       cy="5.1841178"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <circle
+       id="path162-9"
+       cx="3.1532114"
+       cy="30.681612"
+       style="stroke-width:0.29948416"
+       r="1.5" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="4.7240739"
+       y="31.588411"
+       id="text221"><tspan
+         sodipodi:role="line"
+         id="tspan219"
+         x="4.7240739"
+         y="31.588411"
+         style="font-size:2.82222223px;stroke-width:0.26458332">Check </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="1.2553483"
+       y="9.1242809"
+       id="text225"><tspan
+         sodipodi:role="line"
+         id="tspan223"
+         x="1.2553483"
+         y="9.1242809"
+         style="stroke-width:0.26458332">L1 L2 L3 L4    WiFi MQTT    Power</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="1.1045223"
+       y="20.97768"
+       id="text229"><tspan
+         sodipodi:role="line"
+         id="tspan227"
+         x="1.1045223"
+         y="20.97768"
+         style="font-size:6.3499999px;stroke-width:0.26458332">WiFi Controller</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="23.87122"
+       y="32.387844"
+       id="text233"><tspan
+         sodipodi:role="line"
+         id="tspan231"
+         x="23.87122"
+         y="32.387844"
+         style="font-size:2.82222223px;stroke-width:0.26458332">www.robotyka.net.pl</tspan></text>
+    <rect
+       id="rect256"
+       width="58.839417"
+       height="33.736137"
+       x="0.10750538"
+       y="0.068630591"
+       style="fill:none;stroke:#000000;stroke-width:0.33428058;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>
