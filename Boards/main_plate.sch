@@ -14148,6 +14148,7 @@ Wi Fi Arduino</description>
 <part name="JP6" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="JP7" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="X4" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK300/2" device="" package3d_urn="urn:adsk.eagle:package:9881/1"/>
+<part name="JP8" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -14189,6 +14190,7 @@ Wi Fi Arduino</description>
 <instance part="JP7" gate="G$1" x="55.88" y="7.62" rot="R180"/>
 <instance part="X4" gate="-1" x="20.32" y="50.8"/>
 <instance part="X4" gate="-2" x="20.32" y="45.72"/>
+<instance part="JP8" gate="G$1" x="55.88" y="20.32" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -14288,6 +14290,8 @@ Wi Fi Arduino</description>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="48.26" y1="20.32" x2="48.26" y2="25.4" width="0.1524" layer="91"/>
 <junction x="48.26" y="20.32"/>
+<pinref part="JP8" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="20.32" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
