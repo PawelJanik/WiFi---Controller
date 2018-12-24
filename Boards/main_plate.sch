@@ -45,16 +45,16 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="no" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="no" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="no" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
@@ -14123,8 +14123,8 @@ Wi Fi Arduino</description>
 </class>
 </classes>
 <parts>
-<part name="IC1" library="uln-udn" library_urn="urn:adsk.eagle:library:407" deviceset="ULN2003A" device="N" package3d_urn="urn:adsk.eagle:package:30239/1"/>
-<part name="IC2" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="78XXS" device="" package3d_urn="urn:adsk.eagle:package:30342/1"/>
+<part name="U3" library="uln-udn" library_urn="urn:adsk.eagle:library:407" deviceset="ULN2003A" device="N" package3d_urn="urn:adsk.eagle:package:30239/1"/>
+<part name="U2" library="v-reg" library_urn="urn:adsk.eagle:library:409" deviceset="78XXS" device="" package3d_urn="urn:adsk.eagle:package:30342/1"/>
 <part name="X1" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK300/2" device="" package3d_urn="urn:adsk.eagle:package:9881/1"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E3.5-8" package3d_urn="urn:adsk.eagle:package:23360/2"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E3.5-8" package3d_urn="urn:adsk.eagle:package:23360/2"/>
@@ -14137,7 +14137,7 @@ Wi Fi Arduino</description>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
-<part name="U$1" library="Lolin" deviceset="LOLIN" device=""/>
+<part name="U1" library="Lolin" deviceset="LOLIN" device=""/>
 <part name="X2" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK300/4" device="" package3d_urn="urn:adsk.eagle:package:9879/1"/>
 <part name="X3" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK300/6" device="" package3d_urn="urn:adsk.eagle:package:9886/1"/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
@@ -14155,8 +14155,8 @@ Wi Fi Arduino</description>
 <plain>
 </plain>
 <instances>
-<instance part="IC1" gate="A" x="137.16" y="55.88"/>
-<instance part="IC2" gate="1" x="30.48" y="20.32"/>
+<instance part="U3" gate="A" x="137.16" y="55.88"/>
+<instance part="U2" gate="1" x="30.48" y="20.32"/>
 <instance part="X1" gate="-1" x="5.08" y="7.62"/>
 <instance part="X1" gate="-2" x="5.08" y="20.32"/>
 <instance part="C1" gate="G$1" x="12.7" y="15.24"/>
@@ -14170,7 +14170,10 @@ Wi Fi Arduino</description>
 <instance part="P+4" gate="1" x="35.56" y="40.64"/>
 <instance part="GND3" gate="1" x="76.2" y="25.4"/>
 <instance part="P+3" gate="1" x="152.4" y="71.12"/>
-<instance part="U$1" gate="G$1" x="58.42" y="53.34" rot="R270"/>
+<instance part="U1" gate="G$1" x="58.42" y="53.34" smashed="yes" rot="R270">
+<attribute name="NAME" x="52.07" y="72.898" size="1.27" layer="95"/>
+<attribute name="VALUE" x="73.66" y="71.12" size="1.27" layer="96" rot="R270"/>
+</instance>
 <instance part="X2" gate="-1" x="170.18" y="48.26" rot="R180"/>
 <instance part="X2" gate="-2" x="170.18" y="53.34" rot="R180"/>
 <instance part="X2" gate="-3" x="170.18" y="58.42" rot="R180"/>
@@ -14197,7 +14200,7 @@ Wi Fi Arduino</description>
 <nets>
 <net name="+12V" class="0">
 <segment>
-<pinref part="IC2" gate="1" pin="IN"/>
+<pinref part="U2" gate="1" pin="IN"/>
 <pinref part="P+1" gate="1" pin="+12V"/>
 <wire x1="12.7" y1="20.32" x2="20.32" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="20.32" x2="22.86" y2="20.32" width="0.1524" layer="91"/>
@@ -14212,7 +14215,7 @@ Wi Fi Arduino</description>
 <wire x1="12.7" y1="20.32" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="A" pin="CD+"/>
+<pinref part="U3" gate="A" pin="CD+"/>
 <pinref part="P+3" gate="1" pin="+12V"/>
 <wire x1="149.86" y1="45.72" x2="152.4" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="45.72" x2="152.4" y2="68.58" width="0.1524" layer="91"/>
@@ -14234,7 +14237,7 @@ Wi Fi Arduino</description>
 <junction x="20.32" y="7.62"/>
 <pinref part="C1" gate="G$1" pin="-"/>
 <wire x1="12.7" y1="10.16" x2="12.7" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="1" pin="GND"/>
+<pinref part="U2" gate="1" pin="GND"/>
 <wire x1="30.48" y1="12.7" x2="30.48" y2="7.62" width="0.1524" layer="91"/>
 <junction x="30.48" y="7.62"/>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -14247,7 +14250,7 @@ Wi Fi Arduino</description>
 <junction x="48.26" y="7.62"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="A" pin="GND"/>
+<pinref part="U3" gate="A" pin="GND"/>
 <wire x1="124.46" y1="45.72" x2="121.92" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="121.92" y1="45.72" x2="121.92" y2="43.18" width="0.1524" layer="91"/>
@@ -14270,16 +14273,16 @@ Wi Fi Arduino</description>
 <junction x="40.64" y="48.26"/>
 <wire x1="45.72" y1="38.1" x2="40.64" y2="38.1" width="0.1524" layer="91"/>
 <junction x="40.64" y="38.1"/>
-<pinref part="U$1" gate="G$1" pin="G"/>
-<pinref part="U$1" gate="G$1" pin="G1"/>
-<pinref part="U$1" gate="G$1" pin="G2"/>
-<pinref part="U$1" gate="G$1" pin="G3"/>
-<pinref part="U$1" gate="G$1" pin="G4"/>
+<pinref part="U1" gate="G$1" pin="G"/>
+<pinref part="U1" gate="G$1" pin="G1"/>
+<pinref part="U1" gate="G$1" pin="G2"/>
+<pinref part="U1" gate="G$1" pin="G3"/>
+<pinref part="U1" gate="G$1" pin="G4"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="IC2" gate="1" pin="OUT"/>
+<pinref part="U2" gate="1" pin="OUT"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="20.32" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="20.32" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
@@ -14297,19 +14300,19 @@ Wi Fi Arduino</description>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <wire x1="45.72" y1="35.56" x2="35.56" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="35.56" x2="35.56" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="VIN"/>
+<pinref part="U1" gate="G$1" pin="VIN"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="IC1" gate="A" pin="O1"/>
+<pinref part="U3" gate="A" pin="O1"/>
 <wire x1="149.86" y1="63.5" x2="165.1" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-4" pin="KL"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="IC1" gate="A" pin="O2"/>
+<pinref part="U3" gate="A" pin="O2"/>
 <wire x1="149.86" y1="60.96" x2="162.56" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="60.96" x2="162.56" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="58.42" x2="165.1" y2="58.42" width="0.1524" layer="91"/>
@@ -14318,7 +14321,7 @@ Wi Fi Arduino</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="IC1" gate="A" pin="O3"/>
+<pinref part="U3" gate="A" pin="O3"/>
 <wire x1="149.86" y1="58.42" x2="160.02" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="58.42" x2="160.02" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="53.34" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
@@ -14327,7 +14330,7 @@ Wi Fi Arduino</description>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="IC1" gate="A" pin="O4"/>
+<pinref part="U3" gate="A" pin="O4"/>
 <wire x1="149.86" y1="55.88" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="55.88" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="48.26" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
@@ -14337,7 +14340,7 @@ Wi Fi Arduino</description>
 <net name="N$1" class="0">
 <segment>
 <wire x1="73.66" y1="71.12" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D0"/>
+<pinref part="U1" gate="G$1" pin="D0"/>
 <pinref part="X3" gate="-1" pin="KL"/>
 </segment>
 </net>
@@ -14346,9 +14349,9 @@ Wi Fi Arduino</description>
 <wire x1="71.12" y1="68.58" x2="83.82" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="68.58" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="A" pin="I1"/>
+<pinref part="U3" gate="A" pin="I1"/>
 <wire x1="121.92" y1="63.5" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D1"/>
+<pinref part="U1" gate="G$1" pin="D1"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="81.28" x2="83.82" y2="68.58" width="0.1524" layer="91"/>
 <junction x="83.82" y="68.58"/>
@@ -14356,11 +14359,11 @@ Wi Fi Arduino</description>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="IC1" gate="A" pin="I2"/>
+<pinref part="U3" gate="A" pin="I2"/>
 <wire x1="124.46" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="60.96" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D2"/>
+<pinref part="U1" gate="G$1" pin="D2"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="91.44" y1="66.04" x2="71.12" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="81.28" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
@@ -14372,9 +14375,9 @@ Wi Fi Arduino</description>
 <wire x1="71.12" y1="63.5" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="63.5" x2="116.84" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="63.5" x2="116.84" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="A" pin="I3"/>
+<pinref part="U3" gate="A" pin="I3"/>
 <wire x1="116.84" y1="58.42" x2="124.46" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D3"/>
+<pinref part="U1" gate="G$1" pin="D3"/>
 <pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="81.28" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
 <junction x="99.06" y="63.5"/>
@@ -14382,11 +14385,11 @@ Wi Fi Arduino</description>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="IC1" gate="A" pin="I4"/>
+<pinref part="U3" gate="A" pin="I4"/>
 <wire x1="124.46" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="55.88" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="60.96" x2="106.68" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D4"/>
+<pinref part="U1" gate="G$1" pin="D4"/>
 <pinref part="JP4" gate="G$1" pin="1"/>
 <wire x1="106.68" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="81.28" x2="106.68" y2="60.96" width="0.1524" layer="91"/>
@@ -14396,20 +14399,20 @@ Wi Fi Arduino</description>
 <net name="N$16" class="0">
 <segment>
 <wire x1="45.72" y1="71.12" x2="30.48" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="A0"/>
+<pinref part="U1" gate="G$1" pin="A0"/>
 <pinref part="X3" gate="-2" pin="KL"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="X3" gate="-6" pin="KL"/>
-<pinref part="U$1" gate="G$1" pin="D8"/>
+<pinref part="U1" gate="G$1" pin="D8"/>
 <wire x1="78.74" y1="45.72" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D7"/>
+<pinref part="U1" gate="G$1" pin="D7"/>
 <pinref part="X3" gate="-5" pin="KL"/>
 <wire x1="71.12" y1="48.26" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
 </segment>
@@ -14417,13 +14420,13 @@ Wi Fi Arduino</description>
 <net name="N$8" class="0">
 <segment>
 <pinref part="X3" gate="-4" pin="KL"/>
-<pinref part="U$1" gate="G$1" pin="D6"/>
+<pinref part="U1" gate="G$1" pin="D6"/>
 <wire x1="78.74" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D5"/>
+<pinref part="U1" gate="G$1" pin="D5"/>
 <pinref part="X3" gate="-3" pin="KL"/>
 <wire x1="71.12" y1="53.34" x2="78.74" y2="53.34" width="0.1524" layer="91"/>
 </segment>
@@ -14432,13 +14435,13 @@ Wi Fi Arduino</description>
 <segment>
 <pinref part="JP5" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="43.18" x2="96.52" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="RX"/>
+<pinref part="U1" gate="G$1" pin="RX"/>
 <wire x1="96.52" y1="43.18" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="TX"/>
+<pinref part="U1" gate="G$1" pin="TX"/>
 <wire x1="71.12" y1="40.64" x2="96.52" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="40.64" x2="96.52" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="JP6" gate="G$1" pin="1"/>
@@ -14447,7 +14450,7 @@ Wi Fi Arduino</description>
 </net>
 <net name="N$17" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="3V2"/>
+<pinref part="U1" gate="G$1" pin="3V2"/>
 <pinref part="X4" gate="-2" pin="KL"/>
 <wire x1="45.72" y1="45.72" x2="27.94" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="X4" gate="-1" pin="KL"/>
