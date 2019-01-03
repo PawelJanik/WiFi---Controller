@@ -15,7 +15,7 @@
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-LEDclass led[4] = {{D4, 1}, {D3, 2}, {D2, 3}, {D1, 4}};
+LEDclass led[4] = {{D4, 95, 1000}, {D3, 95, 1000}, {D2,  95, 1000}, {D1,  95, 1000}};
 
 OneWire oneWire(D6);
 DallasTemperature sensors(&oneWire);
@@ -43,41 +43,42 @@ int bytesToInt(unsigned char* b, unsigned length)
 
 void reconnect() 
 {
-	Serial.print("Attempting MQTT connection...");
+	digitalWrite(1, LOW);
+	
 	if (client.connect(controllerName, mqttLogin, mqttPasswd))
 	{
 		Serial.println("connected");
 		
-		client.subscribe("home/myRoom/light/1");
-		client.subscribe("home/myRoom/light/1/level");
+		client.subscribe("home/myRoom/light/1/1");
+		client.subscribe("home/myRoom/light/1/1/level");
 		
-		client.subscribe("home/myRoom/light/2");
-		client.subscribe("home/myRoom/light/2/level");
+		client.subscribe("home/myRoom/light/1/2");
+		client.subscribe("home/myRoom/light/1/2/level");
 		
-		client.subscribe("home/myRoom/light/3");
-		client.subscribe("home/myRoom/light/3/level");
+		client.subscribe("home/myRoom/light/1/3");
+		client.subscribe("home/myRoom/light/1/3/level");
 		
-		client.subscribe("home/myRoom/light/4");
-		client.subscribe("home/myRoom/light/4/level");
+		client.subscribe("home/myRoom/light/1/4");
+		client.subscribe("home/myRoom/light/1/4/level");
+		
+		client.subscribe("home/myRoom/light/1/0");
+		client.subscribe("home/myRoom/light/1/0/level");
 		
 		client.subscribe("home/myRoom/light/0");
 		client.subscribe("home/myRoom/light/0/level");
 		
-		digitalWrite(D10, HIGH);
-	} 
-	else
-	{
-		Serial.print("failed, rc=");
-		Serial.print(client.state());
-		Serial.println(" try again in 1 seconds");
-		delay(1000);
-		digitalWrite(D10, LOW);
+		client.subscribe("home/myRoom/light/1/0/speed");
+		client.subscribe("home/myRoom/light/0/speed");
+		
+		client.subscribe("home/controllers/0/restart");
+		
+		digitalWrite(1, HIGH);
 	}
 }
 
 void callback(char * topic, byte* payload, unsigned int length) 
 {
-	if(strcmp(topic,"home/myRoom/light/1")==0)
+	if(strcmp(topic,"home/myRoom/light/1/1")==0)
 	{
 		if ((char)payload[0] == '1') 
 		{
@@ -91,7 +92,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 		}
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/2")==0)
+	if(strcmp(topic,"home/myRoom/light/1/2")==0)
 	{
 		if ((char)payload[0] == '1') 
 		{
@@ -105,7 +106,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 		}
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/3")==0)
+	if(strcmp(topic,"home/myRoom/light/1/3")==0)
 	{
 		if ((char)payload[0] == '1') 
 		{
@@ -119,7 +120,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 		}
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/4")==0)
+	if(strcmp(topic,"home/myRoom/light/1/4")==0)
 	{
 		if ((char)payload[0] == '1') 
 		{
@@ -133,7 +134,8 @@ void callback(char * topic, byte* payload, unsigned int length)
 		}
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/0")==0)
+	if((strcmp(topic,"home/myRoom/light/1/0")==0) ||
+		(strcmp(topic,"home/myRoom/light/0")==0))
 	{
 		if ((char)payload[0] == '1') 
 		{
@@ -151,7 +153,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 		}
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/1/level")==0)
+	if(strcmp(topic,"home/myRoom/light/1/1/level")==0)
 	{
 		int value = bytesToInt(payload,length);
 		Serial.println(value);
@@ -163,7 +165,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/2/level")==0)
+	if(strcmp(topic,"home/myRoom/light/1/2/level")==0)
 	{
 		int value = bytesToInt(payload,length);
 		Serial.println(value);
@@ -175,7 +177,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/3/level")==0)
+	if(strcmp(topic,"home/myRoom/light/1/3/level")==0)
 	{
 		int value = bytesToInt(payload,length);
 		Serial.println(value);
@@ -187,7 +189,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/4/level")==0)
+	if(strcmp(topic,"home/myRoom/light/1/4/level")==0)
 	{
 		int value = bytesToInt(payload,length);
 		Serial.println(value);
@@ -199,7 +201,8 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 	}
 	
-	if(strcmp(topic,"home/myRoom/light/0/level")==0)
+	if((strcmp(topic,"home/myRoom/light/1/0/level")==0) ||
+		(strcmp(topic,"home/myRoom/light/1/0/level")==0))
 	{
 		int value = bytesToInt(payload,length);
 		Serial.println(value);
@@ -214,6 +217,22 @@ void callback(char * topic, byte* payload, unsigned int length)
 		else
 		{
 			lightState = false;
+		}
+	}
+	
+	if((strcmp(topic,"home/myRoom/light/1/0/speed")==0) || 
+		(strcmp(topic,"home/myRoom/light/0/speed")==0))
+	{
+		LEDclass::speed = bytesToInt(payload,length);;
+	}
+	
+	if(strcmp(topic,"home/controllers/0/restart")==0)
+	{
+		if((char)payload[0] == 'r') 
+		{
+			digitalWrite(1, LOW);
+			digitalWrite(3, LOW);
+			ESP.restart();
 		}
 	}
 }

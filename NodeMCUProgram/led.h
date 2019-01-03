@@ -1,7 +1,7 @@
 class LEDclass
 {	
 public:
-	LEDclass(int Pin, int num);
+	LEDclass(int Pin, int minValue, int maxValue);
 	
 	void turnOn();
 	void turnOff();
@@ -21,4 +21,7 @@ private:
 	int lastTargetValue;
 	
 	bool onOff;
+	
+	int minimumValue;
+	int maximumValue;
 };

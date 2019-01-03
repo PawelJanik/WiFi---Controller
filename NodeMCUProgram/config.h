@@ -1,11 +1,11 @@
-#define controllerName "WiFi controller(main light)"
+#define controllerName "WiFi-controller-0"
 
-#define wifiSSID "SSID"
-#define wifiPasswd "password"
+#define wifiSSID "***REMOVED***"
+#define wifiPasswd "***REMOVED***"
 
-#define otaPasswd "otaPassword"
+#define otaPasswd "***REMOVED***"
 
-#define mqttIP "PI"
+#define mqttIP "***REMOVED***"
 #define mqttPort 1883
-#define mqttLogin "login"
-#define mqttPasswd "password"
+#define mqttLogin "***REMOVED***"
+#define mqttPasswd "***REMOVED***"
