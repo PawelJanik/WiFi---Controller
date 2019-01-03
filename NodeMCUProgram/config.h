@@ -1,11 +1,11 @@
 #define controllerName "WiFi-controller-0"
 
-#define wifiSSID "***REMOVED***"
-#define wifiPasswd "***REMOVED***"
+#define wifiSSID "SSID"
+#define wifiPasswd "PASSWORD"
 
-#define otaPasswd "***REMOVED***"
+#define otaPasswd "OTAPASSWORD"
 
-#define mqttIP "***REMOVED***"
+#define mqttIP "MQTTIP"
 #define mqttPort 1883
-#define mqttLogin "***REMOVED***"
-#define mqttPasswd "***REMOVED***"
+#define mqttLogin "MQTTLOGIN"
+#define mqttPasswd "MQTTPASSWORD"
