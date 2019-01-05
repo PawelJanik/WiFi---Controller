@@ -3,9 +3,9 @@
 #define wifiSSID "SSID"
 #define wifiPasswd "PASSWORD"
 
-#define otaPasswd "OTAPASSWORD"
+#define otaPasswd "12345"
 
-#define mqttIP "MQTTIP"
+#define mqttIP "IP"
 #define mqttPort 1883
-#define mqttLogin "MQTTLOGIN"
-#define mqttPasswd "MQTTPASSWORD"
+#define mqttLogin "LOGIN"
+#define mqttPasswd "PASSWORD"
