@@ -6,8 +6,6 @@
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 
-extern PubSubClient client;
-
 void WIFIsetup()
 {
 	WiFi.mode(WIFI_STA);
@@ -40,9 +38,6 @@ void OTAsetup()
 			type = "filesystem";
 		}
 		Serial.println("Start updating " + type);
-
-		client.publish("home/controllers/0/condition", "update");
-		delay(500);
 	});
 
 	ArduinoOTA.onEnd([]()

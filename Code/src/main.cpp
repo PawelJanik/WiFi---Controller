@@ -45,7 +45,8 @@ void reconnect()
 {
 	digitalWrite(1, LOW);
 
-	if (client.connect(controllerName, mqttLogin, mqttPasswd))
+	//if(client.connect(controllerName, mqttLogin, mqttPasswd))
+	if(client.connect(controllerName))
 	{
 		Serial.println("connected");
 
@@ -344,11 +345,11 @@ void loop()
 
 		if(lightState == false)
 		{
-			client.publish("home/myRoom/wallSwitch", "1");
+			client.publish("home/sensors/switch/0", "1");
 		}
 		else
 		{
-			client.publish("home/myRoom/wallSwitch", "0");
+			client.publish("home/sensors/switch/0", "0");
 		}
 	}
 }

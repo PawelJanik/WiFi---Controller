@@ -13,15 +13,16 @@ int LEDclass::speed;
 LEDclass::LEDclass(int Pin, int minValue, int maxValue)
 {
 	pin = Pin;
-	
+
 	pinMode(pin, OUTPUT);
-	
+
 	onOff = false;
 	value = 0;
 	targetValue = 0;
-	
+	lastTargetValue = 700;
+
 	speed = 10;
-	
+
 	minimumValue = minValue;
 	maximumValue = maxValue;
 }
@@ -39,7 +40,7 @@ void LEDclass::turnOff()
 void LEDclass::setValue(int Value)
 {
 	targetValue = Value;
-	
+
 	if(targetValue >= 1)
 	{
 		onOff = true;
@@ -57,7 +58,7 @@ void LEDclass::set()
 		value = value + speed;
 	else if((targetValue < value) && (value > 0))
 		value = value - speed;
-	
+
 	int v = map(value, 0, 1000, minimumValue, maximumValue);
 	analogWrite(pin, pow(2.0,v/100.0));
 }
@@ -65,6 +66,6 @@ void LEDclass::set()
 void LEDclass::setNow()
 {
 	value = targetValue;
-	
+
 	analogWrite(pin, pow(2.0,value/100.0));
 }
