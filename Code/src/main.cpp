@@ -44,6 +44,7 @@ int bytesToInt(unsigned char* b, unsigned length)
 void reconnect()
 {
 	digitalWrite(1, LOW);
+<<<<<<< HEAD:Code/src/main.cpp
 
 	//if(client.connect(controllerName, mqttLogin, mqttPasswd))
 	if(client.connect(controllerName))
@@ -73,6 +74,36 @@ void reconnect()
 
 		client.subscribe("home/controllers/0/restart");
 
+=======
+	
+	if (client.connect(controllerName, mqttLogin, mqttPasswd))
+	{
+		Serial.println("connected");
+		
+		client.subscribe("home/myRoom/light/1/1");
+		client.subscribe("home/myRoom/light/1/1/level");
+		
+		client.subscribe("home/myRoom/light/1/2");
+		client.subscribe("home/myRoom/light/1/2/level");
+		
+		client.subscribe("home/myRoom/light/1/3");
+		client.subscribe("home/myRoom/light/1/3/level");
+		
+		client.subscribe("home/myRoom/light/1/4");
+		client.subscribe("home/myRoom/light/1/4/level");
+		
+		client.subscribe("home/myRoom/light/1/0");
+		client.subscribe("home/myRoom/light/1/0/level");
+		
+		client.subscribe("home/myRoom/light/0");
+		client.subscribe("home/myRoom/light/0/level");
+		
+		client.subscribe("home/myRoom/light/1/0/speed");
+		client.subscribe("home/myRoom/light/0/speed");
+		
+		client.subscribe("home/controllers/0/restart");
+		
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 		digitalWrite(1, HIGH);
 	}
 }
@@ -92,7 +123,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 		}
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/2")==0)
 	{
 		if ((char)payload[0] == '1')
@@ -106,7 +141,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 		}
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/3")==0)
 	{
 		if ((char)payload[0] == '1')
@@ -120,7 +159,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 		}
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/4")==0)
 	{
 		if ((char)payload[0] == '1')
@@ -134,7 +177,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 		}
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if((strcmp(topic,"home/myRoom/light/1/0")==0) ||
 		(strcmp(topic,"home/myRoom/light/0")==0))
 	{
@@ -153,7 +200,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 		}
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/1/level")==0)
 	{
 		int value = bytesToInt(payload,length);
@@ -165,7 +216,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 		else
 			lightState = false;
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/2/level")==0)
 	{
 		int value = bytesToInt(payload,length);
@@ -177,7 +232,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 		else
 			lightState = false;
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/3/level")==0)
 	{
 		int value = bytesToInt(payload,length);
@@ -189,7 +248,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 		else
 			lightState = false;
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if(strcmp(topic,"home/myRoom/light/1/4/level")==0)
 	{
 		int value = bytesToInt(payload,length);
@@ -201,7 +264,11 @@ void callback(char * topic, byte* payload, unsigned int length)
 		else
 			lightState = false;
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
+=======
+	
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 	if((strcmp(topic,"home/myRoom/light/1/0/level")==0) ||
 		(strcmp(topic,"home/myRoom/light/1/0/level")==0))
 	{
@@ -220,6 +287,7 @@ void callback(char * topic, byte* payload, unsigned int length)
 			lightState = false;
 		}
 	}
+<<<<<<< HEAD:Code/src/main.cpp
 
 	if((strcmp(topic,"home/myRoom/light/1/0/speed")==0) ||
 		(strcmp(topic,"home/myRoom/light/0/speed")==0))
@@ -234,6 +302,19 @@ void callback(char * topic, byte* payload, unsigned int length)
 			client.publish("home/controllers/0/condition", "reset");
 			delay(500);
 
+=======
+	
+	if((strcmp(topic,"home/myRoom/light/1/0/speed")==0) || 
+		(strcmp(topic,"home/myRoom/light/0/speed")==0))
+	{
+		LEDclass::speed = bytesToInt(payload,length);;
+	}
+	
+	if(strcmp(topic,"home/controllers/0/restart")==0)
+	{
+		if((char)payload[0] == 'r') 
+		{
+>>>>>>> fb54ba1... Normalization of light levels and modification of MQTT topic:NodeMCUProgram/NodeMCUProgram.ino
 			digitalWrite(1, LOW);
 			digitalWrite(3, LOW);
 			ESP.restart();
