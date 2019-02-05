@@ -340,16 +340,20 @@ void loop()
 
 	if(digitalRead(D5) != switchState)
 	{
-		switchState = digitalRead(D5);
+		delay(1);
+		if(digitalRead(D5) != switchState)
+		{
+			switchState = digitalRead(D5);
 
 
-		if(lightState == false)
-		{
-			client.publish("home/sensors/switch/0", "1");
-		}
-		else
-		{
-			client.publish("home/sensors/switch/0", "0");
+			if(lightState == false)
+			{
+				client.publish("home/sensors/switch/0", "1");
+			}
+			else
+			{
+				client.publish("home/sensors/switch/0", "0");
+			}
 		}
 	}
 }
